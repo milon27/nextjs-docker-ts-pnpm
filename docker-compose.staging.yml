@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  next_test:
+    container_name: next_test
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: staging
+    ports:
+      - 3000:3000

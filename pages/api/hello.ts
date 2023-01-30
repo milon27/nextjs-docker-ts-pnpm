@@ -9,5 +9,9 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: 'John Doe' })
+  const data = {
+    name: 'John Doe',
+    env: process.env.SOME_SECRET_ENV
+  }
+  res.status(200).send(data)
 }
